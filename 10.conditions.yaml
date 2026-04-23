@@ -12,7 +12,7 @@
 
     - name: print the conditions
       ansible.builtin.command: create expense
-      when: user.rc !=0
+      when: user.rc != 0
 
 
 
