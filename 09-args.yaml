@@ -1,0 +1,6 @@
+- name: print the args
+  hosts: localhost
+  tasks:
+  - name: print the information
+    ansible.builtin.debug:
+      msg: "my company is {{company}} and manager name is {{manager}}"
