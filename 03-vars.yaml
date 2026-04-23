@@ -1,0 +1,10 @@
+- name: print the var files
+  hosts: localhost
+  vars:
+    COMPANY: "concentrix"
+    MANAGER: "kunal natta"
+    AREA: "Brookfield"
+  tasks:
+  - name: print the var files
+    ansible.builtin.debug:
+      msg: "my company name is {{COMPANY}} and manager name is {{MANAGER}} and area is {{AREA}}"
