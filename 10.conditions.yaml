@@ -11,7 +11,7 @@
         msg: "user info is {{user}}"
 
     - name: print the conditions
-      ansible.builtin.command: create expense
+      ansible.builtin.command: useradd expense
       when: user.rc != 0
 
 
