@@ -1,0 +1,14 @@
+- name: print the play tasks
+  hosts: localhost
+  vars:
+    company: "concentrix"
+    manager: "kunal natta"
+    area: "brokefield"
+  tasks:
+  - name: print the task level 
+    vars:
+      company: "concentrix"
+      manager: "kunal natta"
+      area: "brokefield"
+    ansible.builtin.debug:
+      msg: "my copmany name is {{company}} and manager name is {{manager}} and area name is {{area}}"
