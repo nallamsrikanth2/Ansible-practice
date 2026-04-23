@@ -2,7 +2,7 @@
   hosts: web
   tasks:
     - name: check user is there or not
-      ansible.builtin.command: id experiense
+      ansible.builtin.command: id expense
 
     - name: print the information
       ansible.builtin.debug:
