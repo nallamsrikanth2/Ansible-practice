@@ -7,8 +7,8 @@
   tasks:
   - name: print the task level 
     vars:
-      company: "concentrix"
-      manager: "kunal natta"
-      area: "brokefield"
+      company: "accenture"
+      manager: "kunal"
+      area: "whitefield"
     ansible.builtin.debug:
       msg: "my copmany name is {{company}} and manager name is {{manager}} and area name is {{area}}"
