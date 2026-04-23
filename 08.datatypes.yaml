@@ -1,0 +1,18 @@
+- name: print the datatypes
+  hosts: localhost
+  vars:
+    course: "DevOps with aws"
+    tools:
+    - linux
+    - jenkins
+    - terraform
+    - aws
+    experiense:
+      aws: 2
+      docker: 2
+      sonarqube: 2
+    realproject: true
+  tasks:
+  - name: print the information
+    ansible.builtin.debug:
+      msg: "course is {{course}} and tools is {{tools}} and experiense is {{experiense}} and realproject is {{realproject}}"
