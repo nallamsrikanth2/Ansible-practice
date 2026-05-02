@@ -18,6 +18,13 @@
       state: started
       enabled: yes
 
+  - name: install the python libraries
+    ansible.builtin.pip:
+    name:
+    - mypysql
+    - cryptography
+    executable: pip3.9
+
   - name: check root passwod setup or not
     community.mysql.mysql_info:
       login_host: "{{login_host}}"
