@@ -35,8 +35,12 @@
       dest: /app
       remote_src: yes
 
-  - name: change the app directory
+  - name: change the app directory and install the libraries
     ansible.builtin.command: npm install
     args:
       chdir: /app
+
+  - name: 
+
+  
 
