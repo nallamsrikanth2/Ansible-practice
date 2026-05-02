@@ -21,7 +21,7 @@
   - name: install the python libraries
     ansible.builtin.pip:
     name:
-    - mypysql
+    - pymysql
     - cryptography
     executable: pip3.9
 
