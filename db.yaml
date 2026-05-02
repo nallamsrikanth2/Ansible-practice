@@ -20,7 +20,7 @@
   - name: check root passwod setup or not
     community.mysql.mysql_info:
       login_host: "{{login_host}}"
-      login_password: "{{login_password}"
+      login_password: "{{sql_root_password}"
       login_user: "{{login_user}}"
       filter: version
     ignore_errors: true
