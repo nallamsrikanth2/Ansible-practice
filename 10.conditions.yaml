@@ -1,6 +1,6 @@
 - name: check user is there or not with conditions
   hosts: web
-  become: yes
+  become: yes2
   tasks:
     - name: check user is there or not
       ansible.builtin.command: id expense
@@ -20,4 +20,5 @@
     - name: print the information
       ansible.builtin.debug:
         msg: "this is conditions"
+
     

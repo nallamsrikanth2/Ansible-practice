@@ -1,0 +1,30 @@
+- name: configure the db server
+  hosts: db
+  become: yes
+  vars_prompt:
+    - name: sql_root_password
+      prompt: enter your password?
+      private: false
+  vars_files:
+    vars.yaml
+  tasks:
+  - name: install mysql server
+    ansible.builtin.dnf:
+      name: mysql-server
+      state: latest
+  - name: start and enable mysql server
+    ansible.builtin.service:
+      name: mysqld
+      state: started
+      enabled: yes
+  - name: check root passwod setup or not
+    community.mysql.mysql_info:
+      login_host: "{{login_host}}"
+      login_password: "{{login_password}"
+      login_user: "{{login_user}}"
+      filter: version
+    ignore_errors: true
+    register: mysql_info
+  - name: print the mysql_info
+    ansible.builtin.debug:
+      msg: "{{mysql_info}}"

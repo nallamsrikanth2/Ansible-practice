@@ -1,3 +1,6 @@
 company: "concentrix"
 manager: "kunal"
 area: "brokefield"
+
+login_host: db.nsrikanth.online
+login_user: root
