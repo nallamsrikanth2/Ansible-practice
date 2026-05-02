@@ -20,10 +20,10 @@
 
   - name: install the python libraries
     ansible.builtin.pip:
-    name:
-    - pymysql
-    - cryptography
-    executable: pip3.9
+      name:
+      - pymysql
+      - cryptography
+      executable: pip3.9
 
   - name: check root passwod setup or not
     community.mysql.mysql_info:
